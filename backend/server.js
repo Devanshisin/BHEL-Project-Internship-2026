@@ -11,6 +11,8 @@ connectDB();
 
 // Middleware
 const allowedOrigins = [
+  'https://bhel-project-internship-2026.vercel.app',
+  'https://bhel-project.vercel.app',
   'https://bhel-internship-project-fsc9.vercel.app',
   'http://localhost:5173',
   'http://localhost:5174',
