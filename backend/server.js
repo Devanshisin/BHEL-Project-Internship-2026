@@ -17,7 +17,7 @@ const allowedOrigins = [
   'http://localhost:5175'
 ];
 app.use(cors({
-  origin: origin: allowedOrigins,
+  origin: allowedOrigins,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
