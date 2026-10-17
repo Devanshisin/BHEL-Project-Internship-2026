@@ -10,10 +10,14 @@ const app = express();
 connectDB();
 
 // Middleware
+const allowedOrigins = [
+  'https://bhel-internship-project-fsc9.vercel.app',
+  'http://localhost:5173',
+  'http://localhost:5174',
+  'http://localhost:5175'
+];
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production'
-    ? []
-    : ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175'],
+  origin: origin: allowedOrigins,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
